@@ -24,14 +24,22 @@
 
 <script>
   export default {
+    props:['modelValue'],
+    emits: ['update:modelValue'],
     data() {
       return {
-        actioveOptions: null
+        actioveOptions: this.modelValue,
+      }
+    },
+    computed: {
+      actioveOptions() {
+        return this.modelValue;
       }
     },
     methods: {
       activate(option) {
         this.actioveOptions = option;
+        this.$emit('update:modelValue', option);
       }
     }
   }
