@@ -88,7 +88,7 @@
       </div>
     </div>
     <div class="form-control">
-      <RatingControl></RatingControl>
+      <RatingControl v-model="rating"></RatingControl>
     </div>
     <div class="form-control">
       <input 
@@ -119,7 +119,9 @@ export default {
       interest: [],
       how: null,
       confirm: false,
-      userNameValidity: 'pending'
+      rating: null,
+      userNameValidity: 'pending',
+
     }
   },
   methods: {

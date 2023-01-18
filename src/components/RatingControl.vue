@@ -31,11 +31,11 @@
         actioveOptions: this.modelValue,
       }
     },
-    computed: {
+    /* computed: {
       actioveOptions() {
         return this.modelValue;
       }
-    },
+    }, */
     methods: {
       activate(option) {
         this.actioveOptions = option;
